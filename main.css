@@ -1,0 +1,89 @@
+@font-face {
+  font-family: GTWalsheim;
+  src: url("GTWalsheimPro-Regular.ttf");
+}
+body {
+  font-family: GTWalsheim;
+  cursor: url("rsz_11cursor.png"), auto;
+}
+.bg-dark {
+  background: #37306b;
+  transition: background 0.5s ease-in-out;
+}
+.bg-light {
+  background: #f6f1f1;
+  transition: background 0.5s ease-in-out;
+}
+.color-light {
+  color: #fff;
+}
+.color-dark {
+  color: #000;
+}
+main {
+  position: relative;
+  height: 90vh;
+  display: grid;
+  place-content: center;
+}
+.toggle {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  right: 3%;
+  top: 7%;
+  background: transparent;
+  border: none;
+  cursor: url("rsz_1pointer.png"), auto;
+}
+.toggle > img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.card {
+  text-align: center;
+  padding: 1em;
+  box-shadow: 0 1px 5px #00000099;
+  border-radius: 10px;
+  position: relative;
+  width: 300px;
+  height: 400px;
+  transition-duration: 300ms;
+  transition-property: transform, box-shadow;
+  transition-timing-function: ease-out;
+  transform: rotate3d(0);
+  cursor: url("rsz_1pointer.png"), auto;
+  overflow: hidden;
+}
+.card .glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-image: radial-gradient(circle at 50% -20%, #ffffff22, #0000000f);
+}
+.card:hover {
+  transition-duration: 150ms;
+  box-shadow: 0 5px 20px 5px #00000044;
+}
+.card > img {
+  height: 200px;
+}
+
+.links {
+  position: relative;
+  z-index: 100;
+  margin-top: 1.4rem;
+}
+.links > a {
+  margin: 0 0.3rem;
+}
+
+.opacity {
+  opacity: 1 !important;
+}
